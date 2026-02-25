@@ -1,0 +1,60 @@
+SELECT DISTINCT country FROM singer WHERE age  >  20	concert_singer
+SELECT DISTINCT country FROM singer WHERE age  >  20	concert_singer
+SELECT count(*) FROM pets WHERE weight  >  10	pets_1
+SELECT count(*) FROM pets WHERE weight  >  10	pets_1
+SELECT count(DISTINCT pettype) FROM pets	pets_1
+SELECT count(DISTINCT pettype) FROM pets	pets_1
+SELECT count(*) FROM CONTINENTS;	car_1
+SELECT count(*) FROM CONTINENTS;	car_1
+SELECT count(*) FROM AIRLINES	flight_2
+SELECT count(*) FROM AIRLINES	flight_2
+SELECT count(*) FROM AIRPORTS	flight_2
+SELECT count(*) FROM AIRPORTS	flight_2
+SELECT count(*) FROM AIRLINES WHERE Country  =  "USA"	flight_2
+SELECT count(*) FROM AIRLINES WHERE Country  =  "USA"	flight_2
+SELECT count(*) FROM Documents	cre_Doc_Template_Mgt
+SELECT count(*) FROM Documents	cre_Doc_Template_Mgt
+SELECT count(*) FROM Templates	cre_Doc_Template_Mgt
+SELECT count(*) FROM Templates	cre_Doc_Template_Mgt
+SELECT DISTINCT template_type_code FROM Templates	cre_Doc_Template_Mgt
+SELECT DISTINCT template_type_code FROM Templates	cre_Doc_Template_Mgt
+SELECT count(*) FROM Templates WHERE template_type_code  =  "CV"	cre_Doc_Template_Mgt
+SELECT count(*) FROM Templates WHERE template_type_code  =  "CV"	cre_Doc_Template_Mgt
+SELECT count(*) FROM Paragraphs	cre_Doc_Template_Mgt
+SELECT count(*) FROM Paragraphs	cre_Doc_Template_Mgt
+SELECT Name FROM teacher ORDER BY Age ASC	course_teach
+SELECT Name FROM teacher ORDER BY Age ASC	course_teach
+SELECT count(*) FROM players	wta_1
+SELECT count(*) FROM players	wta_1
+SELECT count(*) FROM matches	wta_1
+SELECT count(*) FROM matches	wta_1
+SELECT count(DISTINCT country_code) FROM players	wta_1
+SELECT count(DISTINCT country_code) FROM players	wta_1
+SELECT count(*) FROM Courses	student_transcripts_tracking
+SELECT count(*) FROM Courses	student_transcripts_tracking
+SELECT avg(transcript_date) FROM Transcripts	student_transcripts_tracking
+SELECT avg(transcript_date) FROM Transcripts	student_transcripts_tracking
+SELECT count(*) FROM Transcripts	student_transcripts_tracking
+SELECT count(*) FROM Transcripts	student_transcripts_tracking
+SELECT count(*) FROM TV_Channel WHERE LANGUAGE = "English";	tvshow
+SELECT count(*) FROM TV_Channel WHERE LANGUAGE = "English";	tvshow
+SELECT Name FROM conductor ORDER BY Age ASC	orchestra
+SELECT Name FROM conductor ORDER BY Age ASC	orchestra
+SELECT avg(age) FROM Dogs	dog_kennels
+SELECT avg(age) FROM Dogs	dog_kennels
+SELECT template_id ,  count(*) FROM Documents GROUP BY template_id	cre_Doc_Template_Mgt
+SELECT template_id ,  count(*) FROM Documents GROUP BY template_id	cre_Doc_Template_Mgt
+SELECT template_id ,  version_number ,  template_type_code FROM Templates	cre_Doc_Template_Mgt
+SELECT template_id ,  version_number ,  template_type_code FROM Templates	cre_Doc_Template_Mgt
+SELECT count(*) FROM matches WHERE YEAR  =  2013 OR YEAR  =  2016	wta_1
+SELECT count(*) FROM matches WHERE YEAR  =  2013 OR YEAR  =  2016	wta_1
+SELECT max(SHARE) , min(SHARE) FROM TV_series;	tvshow
+SELECT max(SHARE) , min(SHARE) FROM TV_series;	tvshow
+SELECT Nationality ,  COUNT(*) FROM people GROUP BY Nationality	poker_player
+SELECT Nationality ,  COUNT(*) FROM people GROUP BY Nationality	poker_player
+SELECT Name ,  Birth_Date FROM people ORDER BY Name ASC	poker_player
+SELECT Name ,  Birth_Date FROM people ORDER BY Name ASC	poker_player
+SELECT max(SHARE) ,  min(SHARE) FROM performance WHERE TYPE != "Live final"	orchestra
+SELECT max(SHARE) ,  min(SHARE) FROM performance WHERE TYPE != "Live final"	orchestra
+SELECT student_id ,  count(*) FROM Likes GROUP BY student_id	network_1
+SELECT student_id ,  count(*) FROM Likes GROUP BY student_id	network_1

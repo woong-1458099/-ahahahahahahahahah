@@ -1,0 +1,51 @@
+# Large database files (5.7GB)
+test-suite-sql-eval-master/database/*/
+
+# Cache files
+test-suite-sql-eval-master/cache.pkl
+test-suite-sql-eval-master/tmp/*
+!test-suite-sql-eval-master/tmp/readme.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# Model checkpoints (can be large)
+checkpoints/
+models/
+*.pth
+*.pt
+*.bin
+*.safetensors
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+outputs/

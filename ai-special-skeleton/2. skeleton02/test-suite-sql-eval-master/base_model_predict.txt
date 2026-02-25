@@ -1,0 +1,60 @@
+SELECT COUNT(*) FROM singers WHERE age > 20 AND country = 'Country Name'	concert_singer
+SELECT COUNT(*) FROM singers WHERE age > 20	concert_singer
+SELECT COUNT(*) FROM pets WHERE weight > 10	pets_1
+SELECT COUNT(*) FROM pets WHERE weight > 10	pets_1
+SELECT COUNT(*) FROM pets	pets_1
+SELECT COUNT(*) FROM pets	pets_1
+SELECT COUNT(*) FROM continents	car_1
+SELECT COUNT(*) FROM continents	car_1
+SELECT COUNT(*) FROM airlines	flight_2
+SELECT COUNT(*) FROM airlines	flight_2
+SELECT COUNT(*) FROM airports	flight_2
+SELECT COUNT(*) FROM airports	flight_2
+SELECT COUNT(*) FROM airlines WHERE country = 'USA'	flight_2
+SELECT COUNT(*) FROM airlines WHERE country = 'USA'	flight_2
+SELECT COUNT(*) FROM documents	cre_Doc_Template_Mgt
+SELECT COUNT(*) FROM documents	cre_Doc_Template_Mgt
+SELECT COUNT(*) FROM templates	cre_Doc_Template_Mgt
+SELECT COUNT(*) FROM templates	cre_Doc_Template_Mgt
+SELECT DISTINCT template_type_code FROM templates WHERE template_type_code IS NOT NULL	cre_Doc_Template_Mgt
+SELECT * FROM template_type_codes WHERE template_type_code = '1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000	cre_Doc_Template_Mgt
+SELECT COUNT(*) FROM templates WHERE template_type_code = 'CV'	cre_Doc_Template_Mgt
+SELECT COUNT(*) FROM templates WHERE type = 'CV'	cre_Doc_Template_Mgt
+SELECT COUNT(*) FROM paragraphs	cre_Doc_Template_Mgt
+SELECT COUNT(*) FROM paragraphs	cre_Doc_Template_Mgt
+SELECT name FROM teachers ORDER BY age ASC	course_teach
+SELECT name FROM teachers WHERE age ASC	course_teach
+SELECT COUNT(*) FROM players	wta_1
+SELECT COUNT(*) FROM players	wta_1
+SELECT COUNT(*) FROM table_name	wta_1
+SELECT COUNT(*) FROM table_name	wta_1
+SELECT COUNT(*) FROM players WHERE country_code IN (SELECT country_code FROM players)	wta_1
+SELECT COUNT(*) FROM players WHERE country = 'USA'	wta_1
+SELECT COUNT(*) FROM courses	student_transcripts_tracking
+SELECT COUNT(*) FROM courses	student_transcripts_tracking
+SELECT COUNT(*) FROM transcripts WHERE timestamp = 'On average, when were the transcripts printed?'	student_transcripts_tracking
+SELECT AVG(DATE_FORMAT(transcript_date, '%Y-%m-%d')) AS average_transcript_date FROM users	student_transcripts_tracking
+SELECT COUNT(*) FROM transcripts	student_transcripts_tracking
+SELECT COUNT(*) FROM transcripts	student_transcripts_tracking
+SELECT COUNT(*) FROM tv_channel WHERE language = 'English'	tvshow
+SELECT COUNT(*) FROM tv_channels WHERE language = 'English'	tvshow
+SELECT name FROM conductors ORDER BY age ASC	orchestra
+SELECT name FROM users WHERE age > 18	orchestra
+SELECT AVG(AGE) AS "Average Age" FROM DOGS	dog_kennels
+SELECT AVG(AGE) AS AVG_AGE FROM DOGS	dog_kennels
+CREATE TABLE template_ids (     template_id INT PRIMARY KEY,     number_of_documents INT )  CREATE TABLE documents (     document_id INT PRIMARY KEY,     template_id INT,     FOREIGN KEY (template_id) REFERENCES template_ids(template_id) )  INSERT INTO documents (document_id, template_id) VALUES (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1), (9, 1), (10, 1), (11, 1), (12, 1), (13, 1), (14, 1), (15, 1), (16, 1), (17, 1), (18, 1), (19, 1), (20, 1), (21, 1), (22, 1), (23, 1), (24, 1), (25, 1), (26, 1), (27, 1), (28, 1), (29, 1), (30, 1), (31, 1), (32, 1), (33, 1), (34, 1), (35, 1), (36, 1), (37, 1), (38, 1), (39, 1), (40, 1), (41, 1), (42, 1), (43, 1), (44, 1), (45, 1), (46, 1), (47, 1), (48, 1), (49, 1), (50, 1), (51, 1), (52, 1), (53, 1), (54, 1), (55	cre_Doc_Template_Mgt
+SELECT COUNT(*) FROM documents WHERE template_id IN (SELECT template_id FROM templates WHERE name = 'template_id')	cre_Doc_Template_Mgt
+SELECT t.template_id, t.template_version, t.template_type_code FROM templates t JOIN template_types tt ON tt.template_id = t.template_id WHERE tt.template_type_code IS NOT NULL ORDER BY t.template_id	cre_Doc_Template_Mgt
+SELECT template_id, template_version, template_type_code FROM templates WHERE template_id IN (SELECT template_id FROM templates WHERE template_type_code = 'template_id')	cre_Doc_Template_Mgt
+SELECT COUNT(*) FROM matches WHERE year IN ('2013', '2016')	wta_1
+SELECT COUNT(*) FROM matches WHERE year IN ('2013', '2016')	wta_1
+SELECT MIN(TV_Series_Share) AS "Minimum Share", MAX(TV_Series_Share) AS "Maximum Share" FROM TV_Series	tvshow
+SELECT MAX(share) AS max_share, MIN(share) AS min_share FROM tv_series WHERE season_id IN (SELECT season_id FROM tv_series WHERE season_id > 100)	tvshow
+SELECT nationality, COUNT(*) FROM people GROUP BY nationality HAVING COUNT(*) > 1	poker_player
+SELECT COUNT(*) FROM users WHERE nationality = 'USA'	poker_player
+SELECT name, birth_date FROM people ORDER BY name ASC	poker_player
+SELECT name, birth_date FROM people ORDER BY name ASC	poker_player
+SELECT      MAX(p.share) AS max_share,      MIN(p.share) AS min_share FROM      performances p WHERE      p.type = 'Live final' GROUP BY      MAX(p.share) AS max_share,      MIN(p.share) AS min_share ORDER BY      p.share DESC LIMIT 1	orchestra
+SELECT MAX(share) AS max_share, MIN(share) AS min_share FROM performances WHERE type NOT IN ('Live final')	orchestra
+SELECT student_id, COUNT(*) FROM student_likes GROUP BY student_id ORDER BY student_id	network_1
+SELECT COUNT(*) AS likes_per_student_id FROM student_likes WHERE student_id IN (SELECT student_id FROM student_ids)	network_1

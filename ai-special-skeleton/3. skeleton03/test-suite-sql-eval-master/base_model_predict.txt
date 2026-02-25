@@ -1,0 +1,60 @@
+SELECT DISTINCT country FROM singers WHERE age > 20;	concert_singer
+SELECT DISTINCT country, name  FROM singers  WHERE age > 20 AND country IS NOT NULL;	concert_singer
+SELECT COUNT(*) FROM pets WHERE weight > 10;	pets_1
+SELECT COUNT(*) FROM pets WHERE weight > 10;	pets_1
+SELECT COUNT(DISTINCT pet_type) AS distinct_pet_type FROM pet_inventory;	pets_1
+SELECT DISTINCT type_of_pet  FROM pet_types;	pets_1
+SELECT COUNT(*) FROM continents;	car_1
+SELECT COUNT(*) FROM continents;	car_1
+SELECT COUNT(*) FROM airlines;	flight_2
+SELECT COUNT(*) FROM airlines;	flight_2
+SELECT COUNT(*) FROM airports;	flight_2
+SELECT COUNT(*) FROM airports;	flight_2
+SELECT COUNT(*) FROM airlines WHERE country = 'USA';	flight_2
+SELECT COUNT(*) FROM airlines WHERE country = 'USA';	flight_2
+SELECT COUNT(*) FROM documents;	cre_Doc_Template_Mgt
+SELECT COUNT(*) FROM documents;	cre_Doc_Template_Mgt
+SELECT COUNT(*) FROM templates;	cre_Doc_Template_Mgt
+SELECT COUNT(*) AS template_count FROM templates;	cre_Doc_Template_Mgt
+SELECT DISTINCT template_type_code FROM templates	cre_Doc_Template_Mgt
+SELECT DISTINCT t.template_type_code FROM templates t	cre_Doc_Template_Mgt
+SELECT COUNT(*) FROM templates WHERE template_type_code = 'CV';	cre_Doc_Template_Mgt
+SELECT COUNT(*) FROM templates WHERE type = 'CV';	cre_Doc_Template_Mgt
+SELECT COUNT(*) FROM paragraphs;	cre_Doc_Template_Mgt
+SELECT COUNT(*) FROM paragraphs;	cre_Doc_Template_Mgt
+SELECT name, age  FROM teachers  ORDER BY age ASC;	course_teach
+SELECT name, age FROM teachers ORDER BY age ASC;	course_teach
+SELECT COUNT(*) FROM players;	wta_1
+SELECT COUNT(*) FROM players;	wta_1
+SELECT COUNT(*) FROM matches;	wta_1
+SELECT COUNT(*) FROM table_name WHERE condition_value = 'value';	wta_1
+SELECT COUNT(DISTINCT country_code) FROM players;	wta_1
+SELECT DISTINCT country  FROM players	wta_1
+SELECT COUNT(*) FROM courses;	student_transcripts_tracking
+SELECT COUNT(*) FROM courses;	student_transcripts_tracking
+SELECT DATE_FORMAT(TRANS_DATE, '%Y-%m-%d') AS DATE_PRINTED, COUNT(*) AS COUNT_TRANS FROM TRANSCRIPT GROUP BY DATE_FORMAT(TRANS_DATE, '%Y-%m-%d') HAVING COUNT(*) > 100 ORDER BY DATE_PRINTED DESC;	student_transcripts_tracking
+SELECT AVG(transcript_date) FROM table_name;	student_transcripts_tracking
+SELECT COUNT(*) FROM transcripts;	student_transcripts_tracking
+SELECT COUNT(*) FROM transcripts;	student_transcripts_tracking
+SELECT COUNT(*) FROM TV_CHANNEL WHERE LANGUAGE = 'English';	tvshow
+SELECT COUNT(*) FROM TV_CHANNELS WHERE LANGUAGE = 'English';   This SQL command will count the number of TV Channels that use the English language.	tvshow
+SELECT name FROM conductors ORDER BY age ASC;	orchestra
+SELECT name, age FROM conductors ORDER BY age;	orchestra
+SELECT AVG(age) FROM dogs;	dog_kennels
+SELECT AVG(age) FROM dogs;	dog_kennels
+SELECT t.template_id, COUNT(d.document_id) AS num_docs FROM templates t LEFT JOIN documents d ON t.template_id = d.template_id GROUP BY t.template_id ORDER BY t.template_id;	cre_Doc_Template_Mgt
+SELECT template_id, COUNT(*) AS count FROM documents GROUP BY template_id ORDER BY count DESC;   This SQL command will return the template_id and the count of each template_id used in the documents table. The result will be ordered by the count in descending order.	cre_Doc_Template_Mgt
+SELECT t.id, t.version_number, t.template_type_code FROM templates t WHERE t.template_type_code IN ('Template_Type_1', 'Template_Type_2', 'Template_Type_3');	cre_Doc_Template_Mgt
+SELECT t.id, t.version_number, t.type_code FROM templates t	cre_Doc_Template_Mgt
+SELECT COUNT(*) FROM matches WHERE year IN (2013, 2016);	wta_1
+SELECT COUNT(*) FROM matches WHERE year IN (2013, 2016)	wta_1
+SELECT MIN(rating) AS min_rating, MAX(rating) AS max_rating FROM TV_series;	tvshow
+SELECT MAX(shares) AS max_shares, MIN(shares) AS min_shares FROM TV_series_shares;	tvshow
+SELECT nationality, COUNT(*) AS count FROM users GROUP BY nationality ORDER BY count DESC;   This SQL command will retrieve the different nationalities of people and the corresponding number of people from each nation. The `COUNT(*)` function is used to count the number of rows in the `users` table for each nationality. The `GROUP BY` clause groups the results by nationality, and the `ORDER BY` clause sorts the results in descending order based on the count.	poker_player
+SELECT DISTINCT nationality, COUNT(*)  FROM users  GROUP BY nationality;	poker_player
+SELECT name, birth_date FROM users ORDER BY name ASC;	poker_player
+SELECT name, birth_date FROM users ORDER BY name ASC;	poker_player
+SELECT MAX(performance_share) AS max_share, MIN(performance_share) AS min_share FROM performances WHERE type != 'Live final';	orchestra
+SELECT MAX(shares) AS max_shares, MIN(shares) AS min_shares FROM (     SELECT performance_id, shares     FROM performances     WHERE type != 'Live final' ) AS subquery	orchestra
+SELECT student_id, COUNT(*) AS num_likes FROM likes JOIN students ON likes.student_id = students.student_id GROUP BY student_id;	network_1
+SELECT student_id, COUNT(*) AS num_likes FROM likes JOIN students ON likes.student_id = students.student_id GROUP BY student_id;	network_1

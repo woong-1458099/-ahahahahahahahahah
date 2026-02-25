@@ -1,0 +1,61 @@
+db_id,query,question
+concert_singer,SELECT DISTINCT country FROM singer WHERE age  >  20,What are all distinct countries where singers above age 20 are from?
+concert_singer,SELECT DISTINCT country FROM singer WHERE age  >  20,What are  the different countries with singers above age 20?
+pets_1,SELECT count(*) FROM pets WHERE weight  >  10,Find the number of pets whose weight is heavier than 10.
+pets_1,SELECT count(*) FROM pets WHERE weight  >  10,How many pets have a greater weight than 10?
+pets_1,SELECT count(DISTINCT pettype) FROM pets,Find the number of distinct type of pets.
+pets_1,SELECT count(DISTINCT pettype) FROM pets,How many different types of pet are there?
+car_1,SELECT count(*) FROM CONTINENTS;,How many continents are there?
+car_1,SELECT count(*) FROM CONTINENTS;,What is the number of continents?
+flight_2,SELECT count(*) FROM AIRLINES,How many airlines do we have?
+flight_2,SELECT count(*) FROM AIRLINES,What is the total number of airlines?
+flight_2,SELECT count(*) FROM AIRPORTS,How many airports do we have?
+flight_2,SELECT count(*) FROM AIRPORTS,Return the number of  airports.
+flight_2,"SELECT count(*) FROM AIRLINES WHERE Country  =  ""USA""",How many airlines are from USA?
+flight_2,"SELECT count(*) FROM AIRLINES WHERE Country  =  ""USA""",Return the number of airlines in the USA.
+cre_Doc_Template_Mgt,SELECT count(*) FROM Documents,How many documents do we have?
+cre_Doc_Template_Mgt,SELECT count(*) FROM Documents,Count the number of documents.
+cre_Doc_Template_Mgt,SELECT count(*) FROM Templates,How many templates do we have?
+cre_Doc_Template_Mgt,SELECT count(*) FROM Templates,Count the number of templates.
+cre_Doc_Template_Mgt,SELECT DISTINCT template_type_code FROM Templates,Show all distinct template type codes for all templates.
+cre_Doc_Template_Mgt,SELECT DISTINCT template_type_code FROM Templates,What are the different template type codes?
+cre_Doc_Template_Mgt,"SELECT count(*) FROM Templates WHERE template_type_code  =  ""CV""",How many templates have template type code CV?
+cre_Doc_Template_Mgt,"SELECT count(*) FROM Templates WHERE template_type_code  =  ""CV""",Count the number of templates of the type CV.
+cre_Doc_Template_Mgt,SELECT count(*) FROM Paragraphs,How many paragraphs in total?
+cre_Doc_Template_Mgt,SELECT count(*) FROM Paragraphs,Count the number of paragraphs.
+course_teach,SELECT Name FROM teacher ORDER BY Age ASC,List the names of teachers in ascending order of age.
+course_teach,SELECT Name FROM teacher ORDER BY Age ASC,What are the names of the teachers ordered by ascending age?
+wta_1,SELECT count(*) FROM players,Find the total number of players.
+wta_1,SELECT count(*) FROM players,How many players are there?
+wta_1,SELECT count(*) FROM matches,Find the total number of matches.
+wta_1,SELECT count(*) FROM matches,Count the number of matches.
+wta_1,SELECT count(DISTINCT country_code) FROM players,find the number of distinct country codes of all players.
+wta_1,SELECT count(DISTINCT country_code) FROM players,How many distinct countries do players come from?
+student_transcripts_tracking,SELECT count(*) FROM Courses,How many courses in total are listed?
+student_transcripts_tracking,SELECT count(*) FROM Courses,How many courses are there?
+student_transcripts_tracking,SELECT avg(transcript_date) FROM Transcripts,"On average, when were the transcripts printed?"
+student_transcripts_tracking,SELECT avg(transcript_date) FROM Transcripts,What is the average transcript date?
+student_transcripts_tracking,SELECT count(*) FROM Transcripts,How many transcripts are released?
+student_transcripts_tracking,SELECT count(*) FROM Transcripts,How many transcripts are listed?
+tvshow,"SELECT count(*) FROM TV_Channel WHERE LANGUAGE = ""English"";",How many TV Channel using language English?
+tvshow,"SELECT count(*) FROM TV_Channel WHERE LANGUAGE = ""English"";",How many TV Channels use the English language?
+orchestra,SELECT Name FROM conductor ORDER BY Age ASC,List the names of conductors in ascending order of age.
+orchestra,SELECT Name FROM conductor ORDER BY Age ASC,"What are the names of conductors, ordered by age?"
+dog_kennels,SELECT avg(age) FROM Dogs,What is the average age of all the dogs?
+dog_kennels,SELECT avg(age) FROM Dogs,Compute the average age of all the dogs.
+cre_Doc_Template_Mgt,"SELECT template_id ,  count(*) FROM Documents GROUP BY template_id",Show all template ids and number of documents using each template.
+cre_Doc_Template_Mgt,"SELECT template_id ,  count(*) FROM Documents GROUP BY template_id","What are all different template ids used for documents, and how many times were each of them used?"
+cre_Doc_Template_Mgt,"SELECT template_id ,  version_number ,  template_type_code FROM Templates","Show template ids, version numbers, and template type codes for all templates."
+cre_Doc_Template_Mgt,"SELECT template_id ,  version_number ,  template_type_code FROM Templates","What are the ids, version numbers, and type codes for each template?"
+wta_1,SELECT count(*) FROM matches WHERE YEAR  =  2013 OR YEAR  =  2016,List the number of all matches who played in years of 2013 or 2016.
+wta_1,SELECT count(*) FROM matches WHERE YEAR  =  2013 OR YEAR  =  2016,How many matches were played in 2013 or 2016?
+tvshow,"SELECT max(SHARE) , min(SHARE) FROM TV_series;",What is minimum and maximum share of TV series?
+tvshow,"SELECT max(SHARE) , min(SHARE) FROM TV_series;",What is the maximum and minimum share for the TV series?
+poker_player,"SELECT Nationality ,  COUNT(*) FROM people GROUP BY Nationality",What are different nationalities of people and the corresponding number of people from each nation?
+poker_player,"SELECT Nationality ,  COUNT(*) FROM people GROUP BY Nationality",How many people are there of each nationality?
+poker_player,"SELECT Name ,  Birth_Date FROM people ORDER BY Name ASC",List the names and birth dates of people in ascending alphabetical order of name.
+poker_player,"SELECT Name ,  Birth_Date FROM people ORDER BY Name ASC","What are the names and birth dates of people, ordered by their names in alphabetical order?"
+orchestra,"SELECT max(SHARE) ,  min(SHARE) FROM performance WHERE TYPE != ""Live final""","What are the maximum and minimum share of performances whose type is not ""Live final""."
+orchestra,"SELECT max(SHARE) ,  min(SHARE) FROM performance WHERE TYPE != ""Live final""","Return the maximum and minimum shares for performances that do not have the type ""Live final""."
+network_1,"SELECT student_id ,  count(*) FROM Likes GROUP BY student_id",Count the number of likes for each student id.
+network_1,"SELECT student_id ,  count(*) FROM Likes GROUP BY student_id",How many likes correspond to each student id?

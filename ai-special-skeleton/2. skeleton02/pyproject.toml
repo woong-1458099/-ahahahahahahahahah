@@ -1,0 +1,28 @@
+[project]
+name = "skeleton-3"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "accelerate==1.10.1",
+    "datasets==4.0.0",
+    "ipykernel==7.1.0",
+    "jupyter==1.1.1",
+    "nltk==3.9.2",
+    "numpy==2.1.0",
+    "pandas==2.2.3",
+    "peft==0.17.1",
+    "sqlparse==0.5.5",
+    "torch==2.9.0",
+    "transformers==4.56.0",
+    "trl==0.22.2",
+]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu129" }
+
+[[tool.uv.index]]
+name = "pytorch-cu129"
+url = "https://download.pytorch.org/whl/cu129"
+explicit = true
