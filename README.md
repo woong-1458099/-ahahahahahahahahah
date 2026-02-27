@@ -19,7 +19,7 @@ AI 특강 강의 (화 ~ 금)를 다 보고, 해당 스켈레톤 과제를 돌려
 
 
 
----
+
 
 # Skeleton01 - Knowledge Distillation을 위한 LLM 기반 Pseudo Labeling 데이터 생성
 
