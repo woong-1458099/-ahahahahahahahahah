@@ -258,7 +258,6 @@ pip install vllm==0.6.6 transformers peft ipykernel notebook
 | 배치 처리 | Static Batching | Continuous Batching |
 | 주요 장점 | 간편한 사용, 유연한 커스터마이징 | 높은 처리량, 효율적 메모리 사용 |
 
-> 구체적인 벤치마크 수치는 vllm.ipynb 노트북의 실행 결과를 참고해주세요.
 
 ## 7. 학습 키워드
 
