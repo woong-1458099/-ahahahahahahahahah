@@ -117,8 +117,6 @@ execution            0.164                0.038                0.111
 - **EDA (Exploratory Data Analysis)**: 학습 전 데이터의 분포와 특성을 탐색하는 과정
 - **Execution Accuracy**: 생성된 SQL 쿼리를 실제 DB에서 실행하여 결과가 일치하는지 평가하는 지표
 
----
-
 # Skeleton03 - QLoRA로 모델을 양자화해서 학습하기
 
 ## 1. 프로젝트 개요
